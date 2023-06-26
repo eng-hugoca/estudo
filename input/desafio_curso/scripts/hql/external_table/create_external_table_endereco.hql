@@ -1,4 +1,4 @@
-CREATE EXTERNAL TABLE IF NOT EXISTS ${DATABASE_STAGE}.${STAGE_TABLE_3} ( 
+CREATE EXTERNAL TABLE IF NOT EXISTS ${DATABASE_STAGE}.${STAGE_TABLE} ( 
         Address Number string,
         City string,
         Country string,
@@ -13,5 +13,5 @@ COMMENT 'Tabela de Endereco'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '${DELIMITED}'
 STORED AS TEXTFILE
-location '${HDFS_LOCATION_3}'
+location '${HDFS_LOCATION}'
 TBLPROPERTIES ("skip.header.line.count"="1");

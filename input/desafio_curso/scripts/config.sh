@@ -1,5 +1,8 @@
-!/bin/bash
+#!/bin/bash
 
+DATE_REFERENCE="$(date "+%Y%m%d")"
+
+PARTITION_NAME="DATA_FOTO"
 
 DATABASE_STAGE="stg_desafio_curso"
 DATABASE_TARGET="desafio_curso"

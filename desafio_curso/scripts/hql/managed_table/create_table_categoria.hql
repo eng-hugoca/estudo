@@ -1,4 +1,4 @@
-CREATE EXTERNAL TABLE IF NOT EXISTS desafio.categoria ( 
+CREATE EXTERNAL TABLE IF NOT EXISTS desafio_curso.stg_categoria ( 
         id_categoria string,
         ds_categoria string,
         perc_parceiro string

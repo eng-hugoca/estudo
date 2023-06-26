@@ -1,6 +1,10 @@
+CREATE DATABASE IF NOT EXISTS ${DATABASE_STAGE};
+
+DROP TABLE IF EXISTS ${DATABASE_STAGE}.${STAGE_TABLE};
+
 CREATE EXTERNAL TABLE IF NOT EXISTS ${DATABASE_STAGE}.${STAGE_TABLE} ( 
         Division string,
-        Division Name string
+        Division_Name string
     )
 COMMENT 'Tabela de Divisao'
 ROW FORMAT DELIMITED

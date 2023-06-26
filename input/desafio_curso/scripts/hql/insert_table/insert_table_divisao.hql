@@ -4,7 +4,7 @@ SET hive.exec.dynamic.partition.mode=nonstrict;
 
 
 INSERT INTO 
-   ${DATABASE_TARGET}.${TARGET_TABLE_2}
+   ${DATABASE_TARGET}.${TARGET_TABLE}
 
 PARTITION(DATA_FOTO) 
 SELECT
@@ -12,5 +12,5 @@ SELECT
         Division,
         Division Name,
         ${DATE_REFERENCE} AS ${PARTITION_NAME}
-FROM ${DATABASE_STAGE}.${STAGE_TABLE_2}
+FROM ${DATABASE_STAGE}.${STAGE_TABLE}
 ;

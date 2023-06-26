@@ -1,6 +1,10 @@
+CREATE DATABASE IF NOT EXISTS ${DATABASE_STAGE};
+
+DROP TABLE IF EXISTS ${DATABASE_STAGE}.${STAGE_TABLE};
+
 CREATE EXTERNAL TABLE IF NOT EXISTS ${DATABASE_STAGE}.${STAGE_TABLE} ( 
-        Region Code string,
-        Region Name string
+        Region_Code string,
+        Region_Name string
     )
 COMMENT 'Tabela de Regiao'
 ROW FORMAT DELIMITED

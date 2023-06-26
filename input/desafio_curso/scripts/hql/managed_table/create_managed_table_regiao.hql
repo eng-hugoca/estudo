@@ -1,6 +1,10 @@
+CREATE DATABASE IF NOT EXISTS ${DATABASE_TARGET};
+
+DROP TABLE IF EXISTS ${DATABASE_TARGET}.${TARGET_TABLE};
+
 CREATE TABLE ${DATABASE_TARGET}.${TARGET_TABLE_4} (
-        Region Code string,
-        Region Name string
+        Region_Code string,
+        Region_Name string
 )
 
 PARTITIONED BY (DATA_FOTO STRING)

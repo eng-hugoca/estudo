@@ -4,23 +4,23 @@ SET hive.exec.dynamic.partition.mode=nonstrict;
 
 
 INSERT INTO 
-   ${DATABASE_TARGET}.${TARGET_TABLE_1}
+   ${DATABASE_TARGET}.${TARGET_TABLE}
 
 PARTITION(DATA_FOTO) 
 SELECT
 
-        Address Number,
-        Business Family,
-        Business Unit,
+        Address_Number,
+        Business_Family,
+        Business_Unit,
         Customer,
         CustomerKey,
-        Customer Type,
+        Customer_Type,
         Division,
-        Line of Business,
+        Line_of_Business,
         Phone,
-        Region Code,
-        Regional Sales Mgr,
-        Search Type,
+        Region_Code,
+        Regional_Sales_Mgr,
+        Search_Type,
         ${DATE_REFERENCE} AS ${PARTITION_NAME}
-FROM ${DATABASE_STAGE}.${STAGE_TABLE_1}
+FROM ${DATABASE_STAGE}.${STAGE_TABLE}
 ;

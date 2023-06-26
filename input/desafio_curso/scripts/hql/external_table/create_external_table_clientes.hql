@@ -1,16 +1,20 @@
+CREATE DATABASE IF NOT EXISTS ${DATABASE_STAGE};
+
+DROP TABLE IF EXISTS ${DATABASE_STAGE}.${STAGE_TABLE};
+
 CREATE EXTERNAL TABLE IF NOT EXISTS ${DATABASE_STAGE}.${STAGE_TABLE} ( 
-        Address Number string,
-        Business Family string,
-        Business Unit string,
-        Customer string,
-        CustomerKey string,
-        Customer Type string,
-        Division string,
-        Line of Business string,
-        Phone string,
-        Region Code string,
-        Regional Sales Mgr string,
-        Search Type string
+        `Address_Number` string,
+        `Business_Family` string,
+        `Business_Unit` string,
+        `Customer` string,
+        `CustomerKey` string,
+        `Customer_Type` string,
+        `Division` string,
+        `Line_of_Business` string,
+        `Phone` string,
+        `Region_Code` string,
+        `Regional_Sales_Mgr` string,
+        `Search_Type` string
     )
 COMMENT 'Tabela de Clientes'
 ROW FORMAT DELIMITED

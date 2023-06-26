@@ -1,17 +1,21 @@
-CREATE TABLE ${DATABASE_TARGET}.${TARGET_TABLE_1} (
+CREATE DATABASE IF NOT EXISTS ${DATABASE_TARGET};
 
-        Address Number string,
-        Business Family string,
-        Business Unit string,
+DROP TABLE IF EXISTS ${DATABASE_TARGET}.${TARGET_TABLE};
+
+CREATE TABLE ${DATABASE_TARGET}.${TARGET_TABLE} (
+
+        Address_Number string,
+        Business_Family string,
+        Business_Unit string,
         Customer string,
         CustomerKey string,
-        Customer Type string,
+        Customer_Type string,
         Division string,
-        Line of Business string,
+        Line_of_Business string,
         Phone string,
-        Region Code string,
-        Regional Sales Mgr string,
-        Search Type string
+        Region_Code string,
+        Regional_Sales_Mgr string,
+        Search_Type string
 )
 
 PARTITIONED BY (DATA_FOTO STRING)

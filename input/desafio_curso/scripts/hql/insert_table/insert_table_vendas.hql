@@ -29,7 +29,7 @@ SELECT
         Sales_Price,
         Sales_Quantity,
         Sales_Rep,
-        U/M,
+        `U/M`,
         ${DATE_REFERENCE} AS ${PARTITION_NAME}
 FROM ${DATABASE_STAGE}.${STAGE_TABLE}
 ;

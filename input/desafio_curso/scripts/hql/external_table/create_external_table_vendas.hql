@@ -23,7 +23,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS ${DATABASE_STAGE}.${STAGE_TABLE} (
         Sales_Price string,
         Sales_Quantity string,
         Sales_Rep string,
-        U/M string
+        `U/M` string
     )
 COMMENT 'Tabela de Vendas'
 ROW FORMAT DELIMITED

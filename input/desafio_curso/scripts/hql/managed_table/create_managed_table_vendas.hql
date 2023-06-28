@@ -24,7 +24,7 @@ CREATE TABLE ${DATABASE_TARGET}.${TARGET_TABLE} (
         Sales_Price string,
         Sales_Quantity string,
         Sales_Rep string,
-        U/M string
+        `U/M` string
 )
 
 PARTITIONED BY (DATA_FOTO STRING)
@@ -32,7 +32,5 @@ ROW FORMAT SERDE 'org.apache.hadoop.hive.ql.io.orc.OrcSerde'
 STORED AS INPUTFORMAT 'org.apache.hadoop.hive.ql.io.orc.OrcInputFormat' 
 OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.orc.OrcOutputFormat' 
 TBLPROPERTIES ( 'orc.compress'='SNAPPY',
-                'transactional'='true',
-                'transactional_properties'='insert_only',
-                'store.charset'='UTF-8', 'retrieve.charset'='UTF-8'
+  'store.charset'='UTF-8', 'retrieve.charset'='UTF-8'
 );

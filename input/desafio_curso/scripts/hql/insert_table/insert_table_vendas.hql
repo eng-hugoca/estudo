@@ -8,7 +8,6 @@ INSERT INTO
 
 PARTITION(DATA_FOTO) 
 SELECT
-
         Actual_Delivery_Date,
         CustomerKey,
         DateKey,
@@ -24,12 +23,13 @@ SELECT
         Promised_Delivery_Date,
         Sales_Amount,
         Sales_Amount_Based_on_List_Price,
-        Sales_Cost_Amount
+        Sales_Cost_Amount,
         Sales_Margin_Amount,
         Sales_Price,
         Sales_Quantity,
         Sales_Rep,
-        `U/M`,
+        U_M,
+        
         ${DATE_REFERENCE} AS ${PARTITION_NAME}
 FROM ${DATABASE_STAGE}.${STAGE_TABLE}
 ;

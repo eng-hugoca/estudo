@@ -24,7 +24,7 @@ CREATE TABLE ${DATABASE_TARGET}.${TARGET_TABLE} (
         Sales_Price string,
         Sales_Quantity string,
         Sales_Rep string,
-        `U/M` string
+        `U_M` string
 )
 
 PARTITIONED BY (DATA_FOTO STRING)
